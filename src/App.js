@@ -1,5 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
+import './dice-d20-solid.svg'
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
           <div className="App-search">
             <label className="App-search-label">Search by name:</label>
             <input className="App-search-input"></input>
+            <button className="btn-search">Pesquisar</button>
           </div>
           <div className="App-btn-search">
           <button className="btn-gameMech">Game Mechanics</button> 
