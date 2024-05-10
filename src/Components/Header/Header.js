@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../logo.svg'
 import Artboard1 from '../Assets/SVG/Artboard 1.svg'
 import './Header.css'
 

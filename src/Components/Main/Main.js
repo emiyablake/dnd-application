@@ -1,14 +1,22 @@
 import React,{useState} from "react";
-import MonsterList from "./Monsters";
+import MonsterList from "../Monsters/Monsters";
 import './Main.css'
 
+
+function ButtonMonster() {
+  function handleClick(){
+    MonsterList();
+  }
+
+  return(
+    <button onClick={handleClick}>
+      Monster
+    </button>
+  )
+}
+
+
 const Main = () => {
-  const [monstersLoaded, setMonstersLoaded] = useState(false);
-
-  const handleLoadMonsters = () => {
-    setMonstersLoaded(true);
-  };
-
     return (
         <main>
           <h3>What do you wanna know about Dungeons and Dragons?</h3>
@@ -19,7 +27,7 @@ const Main = () => {
             <button className="btn-equip">Equipaments</button> 
             <button className="btn-feats">Feats</button> 
             <button className="btn-features">Features</button> 
-            <button className="btn-monsters" onClick={handleLoadMonsters}>Monsters</button> 
+            <ButtonMonster/>
           </div>
         
           <div className="Main-search">
@@ -27,8 +35,6 @@ const Main = () => {
             <input className="Main-search-input"></input>
             <button className="Main-btn-search">Pesquisar</button>
           </div>
-
-          {monstersLoaded && <MonsterList shouldLoadMonsters={monstersLoaded} />}
           
         </main>
     )
